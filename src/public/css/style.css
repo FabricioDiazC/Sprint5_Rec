@@ -1,0 +1,199 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --danger-color: #e74c3c;
+  --light-gray: #f8f9fa;
+  --dark-text: #333;
+  --border-color: #dee2e6;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-gray);
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+nav {
+  background: #ffffff;
+  padding: 0.8rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+main {
+  padding: 2.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+th, td {
+  border-bottom: 1px solid var(--border-color);
+  padding: 14px 16px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+  background-color: var(--light-gray);
+}
+
+tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Formularios */
+form label {
+  display: block;
+  margin: 1.2rem 0 0.4rem;
+  font-weight: 600;
+  color: #555;
+}
+
+form input[type="text"],
+form input[type="number"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/*TESTEAR*/
+/* Estilo base para ambos botones (Editar y Eliminar) */
+.btn-action {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none; /* Esencial para el enlace "Editar" */
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.btn-edit {
+  background-color: var(--primary-color);
+}
+.btn-edit:hover {
+  background-color: #2980b9;
+}
+
+form[action*="eliminar"] button {
+  background-color: var(--danger-color);
+}
+
+form[action*="eliminar"] button:hover {
+  background-color: #c0392b;
+}
+
+/* Mensajes de error */
+ul.errores {
+  color: var(--danger-color);
+  background-color: #fbeae5;
+  border: 1px solid var(--danger-color);
+  border-radius: 8px;
+  padding: 1rem;
+  list-style-position: inside;
+  margin-top: 1rem;
+}
+
+/* Estilos para la página "Acerca de" */
+.acerca-container h3 {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid var(--border-color);
+}

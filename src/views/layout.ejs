@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Países</title>
+
+  <!-- Vinculamos el archivo de estilos -->
+  <link rel="stylesheet" href="/src/public/css/style.css">
+</head>
+<body>
+
+  <!-- Encabezado principal de la página -->
+  <%- include('partials/header') %>
+  <%- include('partials/navbar') %>
+  <!-- 
+  <header>
+    <h1> Gestor de Países</h1>
+  </header>
+  -->
+  <!-- Barra de navegación -->
+   <!-- 
+  <nav>
+    <a href="/paises">Dashboard</a> | 
+    <a href="/paises/agregar">Agregar País</a> 
+  </nav>
+  -->
+
+  <!-- Sección principal: acá se renderiza el contenido dinámico (body) de cada vista -->
+  <main>
+    <%- body %>
+  </main>
+  
+  <%- include('partials/footer') %>
+
+</body>
+</html>
