@@ -51,10 +51,10 @@ El desarrollo de esta aplicación cumple con los siguientes objetivos clave:
     *Este script tiene una validación para no duplicar países si ya existen en la base de datos.*
 
 5.  **Iniciar el Servidor:**
-    Para correr la aplicación escribe el siguiente comando en la consola:
+    Para correr la aplicación escribi el siguiente comando en la consola:
 
     node src/app.mjs
     
 
 6.  **Acceder a la Aplicación:**
-    Abre tu navegador y visita: http://localhost:3000
+    Abri el navegador y visita: http://localhost:3000
