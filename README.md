@@ -29,12 +29,7 @@ El desarrollo de esta aplicación cumple con los siguientes objetivos clave:
 
 ## Pasos de Ejecución
 1.  **Clonar el Repositorio:**
-    Ejecuta los siguientes comando en consola
-
-    git clone https://github.com/tu-usuario/tu-repositorio.git
-    cd tu-repositorio
     
-
 2.  **Instalar Dependencias:**
     Ejecuta el siguiente comando para instalar todas las librerías necesarias definidas en el `package.json`.
     
@@ -62,4 +57,4 @@ El desarrollo de esta aplicación cumple con los siguientes objetivos clave:
     
 
 6.  **Acceder a la Aplicación:**
-    Abre tu navegador y visita [http://localhost:3000]
+    Abre tu navegador y visita: http://localhost:3000
