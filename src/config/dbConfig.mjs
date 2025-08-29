@@ -10,7 +10,7 @@ export const conectarDB = async () => {
   try {
     // Intentamos conectar usando Mongoose con algunas opciones de configuración modernas
     await mongoose.connect(uri, {
-      useNewUrlParser: true,        // Usa el nuevo parser de URL (más estable)
+      useNewUrlParser: true,        // Usa el nuevo parser de URL (es más estable)
       useUnifiedTopology: true      // Usa el nuevo sistema de gestión de conexiones
     });
 

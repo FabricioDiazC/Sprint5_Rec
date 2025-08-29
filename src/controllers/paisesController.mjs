@@ -152,6 +152,6 @@ export const eliminarPaisExistente = async (req, res) => {
 // MOSTRAR PÁGINA "ACERCA DE"
 // ==============================
 export const mostrarAcercaDe = (req, res) => {
-  // Simplemente renderiza la vista 'acerca.ejs'
+  // Renderiza la vista 'acerca.ejs'
   res.render('acerca');
 };

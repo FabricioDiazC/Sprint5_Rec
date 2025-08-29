@@ -53,12 +53,20 @@
       </tr>
     <% }) %>
     <!-- Fila final con los totales generales -->
-    <tr>
+    <tr class="totals-row">
       <td colspan="3"><strong>Totales</strong></td>
-      <td colspan="1"><%= totalArea %> km²</td>
-      <td><%= totalPoblacion %></td>
-      <td><%= promedioGini %></td>
       
+      <%# El total del área, ahora en la columna correcta %>
+      <td><%= totalArea.toLocaleString('es-ES') %> km²</td>
+      
+      <%# El total de población, formateado para mayor legibilidad %>
+      <td><%= totalPoblacion.toLocaleString('es-ES') %></td>
+
+      <%# El promedio de Gini %>
+      <td><%= promedioGini %></td>
+
+      <%# Celdas vacías para mantener la estructura de la tabla %>
+      <td colspan="3"></td>
     </tr>
   </tbody>
 </table>

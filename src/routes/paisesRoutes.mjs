@@ -15,7 +15,7 @@ import {
   mostrarFormularioEditar,     // Mostrar el formulario para editar un país existente
   actualizarPaisExistente,     // Procesar la edición del país
   eliminarPaisExistente,        // Eliminar un país
-  mostrarAcercaDe
+  mostrarAcercaDe              //Mostrar el apartado de "Acerca de"
 } from '../controllers/paisesController.mjs';
 
 // Creamos una instancia de Router de Express para agrupar todas las rutas

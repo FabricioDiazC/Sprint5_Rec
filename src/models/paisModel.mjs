@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 // Creamos el esquema (estructura) que tendrán los documentos de tipo "país"
 const paisSchema = new mongoose.Schema({
 
-  // Campo 'name' → nombre del país en español (estructura anidada)
+  // Campo 'name' para nombre del país en español (estructura anidada)
   name: {
     spa: {
       official: {
@@ -16,7 +16,7 @@ const paisSchema = new mongoose.Schema({
     }
   },
 
-  // Campo 'capital' → lista de capitales (puede haber más de una)
+  // Campo 'capital' para lista de capitales (puede haber más de una)
   capital: {
     type: [String], // Es un array de strings
     validate: {
@@ -25,7 +25,7 @@ const paisSchema = new mongoose.Schema({
     }
   },
 
-  // Campo 'borders' → lista de códigos de países fronterizos (ej: "ARG", "BRA")
+  // Campo 'borders' para lista de códigos de países fronterizos (ej: "ARG", "BRA")
   borders: {
     type: [String],
     validate: {
@@ -34,33 +34,33 @@ const paisSchema = new mongoose.Schema({
     }
   },
 
-  // Campo 'area' → superficie del país en km²
+  // Campo 'area' para superficie del país en km²
   area: {
     type: Number,
     required: true,
     min: [0, 'El área debe ser un número positivo.'] // Valor mínimo permitido
   },
 
-  // Campo 'population' → cantidad de habitantes
+  // Campo 'population' para cantidad de habitantes
   population: {
     type: Number,
     required: true,
     min: [0, 'La población debe ser un número entero positivo.']
   },
 
-  // Campo 'gini' → índice Gini (opcional), entre 0 y 100
+  // Campo 'gini' para índice Gini (opcional), entre 0 y 100
   gini: {
     type: Number,
     min: 0,
     max: 100
   },
 
-  // Campo 'timezones' → lista de zonas horarias del país
+  // Campo 'timezones' para lista de zonas horarias del país
   timezones: {
     type: [String] // Array de strings (ej: ["UTC−03:00"])
   },
 
-  // Campo 'creador' → nombre de quien creó el país en la app (se valida al guardar)
+  // Campo 'creador' para el nombre de quien creó el país en la app (se valida al guardar)
   creador: {
     type: String,
     required: true

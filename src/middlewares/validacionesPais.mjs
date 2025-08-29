@@ -9,7 +9,7 @@ export const validacionesPais = [
     .isLength({ min: 3, max: 90 })
     .withMessage('El nombre oficial debe tener entre 3 y 90 caracteres.'),
 
-  // Validación personalizada: cada capital debe tener entre 3 y 90 caracteres
+  // Validación: cada capital debe tener entre 3 y 90 caracteres
   body('capital')
     .custom((value) => {
       const arr = value.split(',').map(s => s.trim()); // Separa por coma y limpia espacios
@@ -17,7 +17,7 @@ export const validacionesPais = [
     })
     .withMessage('Cada capital debe tener entre 3 y 90 caracteres.'),
 
-  // Validación personalizada: cada código de frontera debe tener exactamente 3 letras mayúsculas (ej: ARG, BRA)
+  // Validación: cada código de frontera debe tener exactamente 3 letras mayúsculas (ej: ARG, BRA)
   body('borders')
     .custom((value) => {
       const arr = value.split(',').map(s => s.trim());

@@ -74,7 +74,7 @@ table {
 
 th, td {
   border-bottom: 1px solid var(--border-color);
-  padding: 14px 16px;
+  padding: 10px 16px;
   text-align: left;
 }
 
@@ -95,10 +95,17 @@ tr:hover {
   background-color: #e9ecef;
 }
 
+.totals-row {
+  background-color: #f0f2f5;
+  font-weight: 700;          
+  color: var(--secondary-color); 
+  border-top: 3px solid var(--primary-color); 
+}
+
 /* Formularios */
 form label {
   display: block;
-  margin: 1.2rem 0 0.4rem;
+  margin: 0.8rem 0 0.4rem;
   font-weight: 600;
   color: #555;
 }
@@ -138,7 +145,6 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/*TESTEAR*/
 /* Estilo base para ambos botones (Editar y Eliminar) */
 .btn-action {
   display: inline-block;
@@ -147,7 +153,7 @@ button:hover {
   color: white;
   font-size: 1rem;
   font-weight: 600;
-  text-decoration: none; /* Esencial para el enlace "Editar" */
+  text-decoration: none;
   text-align: center;
   border: none;
   cursor: pointer;
@@ -188,12 +194,37 @@ ul.errores {
   margin-top: 2rem;
 }
 
-/* Footer */
+
+
+/*  Footer */
 footer {
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #777;
-  border-top: 1px solid var(--border-color);
+  display: flex; /* Activa Flexbox para alinear elementos */
+  justify-content: space-between; /* Empuja los elementos a los extremos */
+  align-items: center; /* Los centra verticalmente */
+  padding: 1.5rem 2rem; 
+  background-color: #ffffff;
+}
+
+footer p {
+  margin: 0; /* Quita el margen por defecto del párrafo */
+  color: #555;
+}
+
+.github-link {
+  display: flex; /* Flexbox para alinear el logo y el texto DENTRO del enlace */
+  align-items: center;
+  text-decoration: none;
+  color: var(--dark-text);
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.github-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.github-link img {
+  height: 24px; /* Define el tamaño del logo */
+  margin-right: 8px; /* Crea un espacio entre el logo y el texto */
 }

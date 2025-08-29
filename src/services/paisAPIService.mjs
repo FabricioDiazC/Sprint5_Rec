@@ -13,11 +13,11 @@ export const cargarPaisesDesdeAPI = async () => {
   try {
     // Hacemos la solicitud a la API
     const { data } = await axios.get(URL_API);
-    console.log(`🌍 Total países recibidos: ${data.length}`);
+    console.log(`🗺️ Total países recibidos: ${data.length}`);
 
     // Filtramos solo los países que tienen idioma español
     const paisesConEspañol = data.filter(p => p.languages && p.languages.spa);
-    console.log(`🗣️ Países con idioma español: ${paisesConEspañol.length}`);
+    console.log(`🌎 Países con idioma español: ${paisesConEspañol.length}`);
 
     // Definimos una lista de campos que queremos eliminar antes de guardar (no se usan en nuestro modelo)
     const camposAEliminar = [
@@ -55,7 +55,7 @@ export const cargarPaisesDesdeAPI = async () => {
         console.log(`✅ Guardado: ${nuevoPais.name.spa.official}`);
       } else {
         // Si ya está en la base, no lo volvemos a guardar
-        console.log(`⏭️ Ya existe: ${nuevoPais.name.spa.official}`);
+        console.log(`〰️ Ya existe: ${nuevoPais.name.spa.official}`);
       }
     }
 
